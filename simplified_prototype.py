@@ -7,9 +7,8 @@ list_of_elements = [] #size of cooling element
 #Initialize window 
 window = Tk()
 window.title("Simple Tool")
-window.geometry('600x400')
-def add_labels():
     #cooling element label
+def add_labels():
     cooling_element_name_label = Label(window, text="Cooling Element \nName")
     cooling_element_name_label.grid(column=0, row=1)
     #flow rate output label
@@ -23,9 +22,21 @@ def add_labels():
     cooling_element_size_label.grid(column=0,row=3)
     
 def add_textboxes():
+     #cooling element textbox
+    cooling_element_name_textbox = Entry(window,width=10)
+    cooling_element_name_textbox.grid(column=1, row=1)
+    #cooling size textbox
+    cooling_element_size_textbox = Entry(window,width=10)
+    cooling_element_size_textbox.grid(column=1,row=3)
+    #flow rate output textbox
+    flow_rate_output_textbox = Entry(window,width=10)
+    flow_rate_output_textbox.grid(column=3,row=0)
+    #input pressure textbox
+    input_pressure_textbox = Entry(window,width=10)
+    input_pressure_textbox.grid(column=1,row=0)
 
-add_labels();
-add_textboxes();
+add_labels()
+add_textboxes()
 
 #List Box
 listboxName = Listbox(window,width=10)
@@ -58,21 +69,6 @@ def calculate_clicked():
 #calculate_btn = Button(window, text="Calculate", command=calculate_clicked)
 #calculate_btn.grid(column=3, row=8)
 #Start Mainloop
-
-    #cooling element textbox
-    cooling_element_name_textbox = Entry(window,width=10)
-    cooling_element_name_textbox.grid(column=1, row=1)
-    #cooling size textbox
-    cooling_element_size_textbox = Entry(window,width=10)
-    cooling_element_size_textbox.grid(column=1,row=3)
-    #flow rate output textbox
-    flow_rate_output_textbox = Entry(window,width=10)
-    flow_rate_output_textbox.grid(column=3,row=0)
-    #input pressure textbox
-    input_pressure_textbox = Entry(window,width=10)
-    input_pressure_textbox.grid(column=1,row=0)
-    
-    
 window.mainloop()
 
 
