@@ -1,6 +1,9 @@
 import tkinter
 import tkinter.messagebox
 import Element
+import csv
+
+
 #establish main window
 mainWindow = tkinter.Tk()
 mainWindow.title("main tool")
@@ -60,11 +63,12 @@ def add_popup():
     #mainloop to keep popup interactive
     popup.mainloop()
 #Items main window
-#Size of Current Element Selected
+#Info about Current Element Selected
 current_size_label = tkinter.Label(mainWindow, text='Element Size')
 current_size = tkinter.Label(mainWindow, text=elementListBox.get(tkinter.ACTIVE))
 current_size_label.pack()
 current_size.pack()
+
 #mainWIndow button definitions 
 addButton = tkinter.Button(mainWindow, text="Add", command=main_add_clicked)
 deleteButton = tkinter.Button(mainWindow, text="Delete", command=delete_clicked)
