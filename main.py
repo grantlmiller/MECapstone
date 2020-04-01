@@ -66,8 +66,21 @@ def add_popup():
 #Info about Current Element Selected
 current_size_label = tkinter.Label(mainWindow, text='Element Size')
 current_size = tkinter.Label(mainWindow, text=elementListBox.get(tkinter.ACTIVE))
+
+elementPressureLabel=tkinter.Label(mainWindow, text='Element Flow Rate')
+elementPressure=tkinter.Label(mainWindow, text=elementListBox.get(tkinter.ACTIVE))
+
+pInLabel = tkinter.Label(mainWindow, text='Pressure in')
+pInTextBox = tkinter.Entry(mainWindow)
+
 current_size_label.pack()
 current_size.pack()
+
+elementPressureLabel.pack()
+elementPressure.pack()
+
+pInLabel.pack()
+pInTextBox.pack()
 
 #mainWIndow button definitions 
 addButton = tkinter.Button(mainWindow, text="Add", command=main_add_clicked)
